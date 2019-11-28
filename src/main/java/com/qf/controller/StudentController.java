@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Date;
 import java.util.List;
@@ -54,5 +55,16 @@ public class StudentController {
 //        studentService.addStudent(student);
         studentService.save(student);
         return "redirect:/stu/list";
+    }
+
+    /**
+     * 你好新世界
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/hello")
+    public String hello(){
+        System.out.println("hello,spring_boot!");
+        return "hello,spring_boot!";
     }
 }
