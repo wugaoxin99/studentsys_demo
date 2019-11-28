@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息修改</title>
+</head>
+<body>
+    <form action="/stu/update">
+        <input type="hidden" th:value="${student.id}" name="id" />
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" th:value="${student.name}" name="name"/></td>
+            </tr>
+            <tr>
+                <td>年龄：</td>
+                <td><input type="text" th:value="${student.age}" name="age"/></td>
+            </tr>
+            <tr>
+                <td>生日：</td>
+                <td><input type="text" th:value="${#dates.format(student.birthday,'yyyy-MM-dd')}" name="birthdayDemo"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="修改"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
