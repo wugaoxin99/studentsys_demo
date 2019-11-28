@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.sql.Date;
 import java.util.List;
 
+/**
+ * 学生控制器
+ */
 @Controller
 @RequestMapping("/stu")
 public class StudentController {
@@ -55,4 +58,8 @@ public class StudentController {
         studentService.save(student);
         return "redirect:/stu/list";
     }
+    /**
+     * 会写bug的好程序员
+     * bug让代码更精彩
+     */
 }
